@@ -4,7 +4,7 @@ const formInput = document.querySelector('.feedback-form');
 
 initForm();
 
-formInput.addEventListener('input', _.throttle(saveFormToLocalStoradge));
+formInput.addEventListener('input', _.throttle(saveFormToLocalStoradge,500));
 formInput.addEventListener('submit', submitForm);
 
 function initForm() {
