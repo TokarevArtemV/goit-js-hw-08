@@ -20,8 +20,7 @@ function initForm() {
 function saveFormToLocalStoradge(evt) {
   evt.preventDefault;
   const objData = {};
-  const formData = new FormData(formInput);
-  formData.forEach((value, key) => {
+  new FormData(formInput).forEach((value, key) => {
     objData[key] = value;
   });
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(objData));
